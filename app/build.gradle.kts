@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.ViewBinding
+
 plugins {
     id("com.android.application")
 }
@@ -15,6 +17,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures{
+        viewBinding=true;
+    }
+
 
     buildTypes {
         release {

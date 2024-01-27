@@ -1,6 +1,7 @@
 package com.example.myweek2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewbinding.ViewBinding;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
+import com.example.myweek2.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    //private ViewBinding viewVar;
+    private ActivityMainBinding viewVar;
 
     TextView txt1;
     EditText edt1;
@@ -19,10 +25,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
-        txt1=(TextView) findViewById(R.id.txt1);
-        edt1=(EditText) findViewById(R.id.edt1);
+        viewVar= ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(viewVar.getRoot());
+
+        //txt1=(TextView) findViewById(R.id.txt1);
+        txt1= viewVar.txt1;
+
+       // edt1=(EditText) findViewById(R.id.edt1);
+        edt1=viewVar.edt1;
 
         //step2
         btn1= (Button) findViewById(R.id.btn1);
