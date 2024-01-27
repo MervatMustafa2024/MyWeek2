@@ -13,7 +13,7 @@ import com.example.myweek2.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private ViewBinding viewVar;
+    //ERROR :private ViewBinding viewVar;
     private ActivityMainBinding viewVar;
 
     TextView txt1;
